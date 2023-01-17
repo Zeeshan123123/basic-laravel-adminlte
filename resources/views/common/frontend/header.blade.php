@@ -1,9 +1,11 @@
 <header class="top-navbar header-section position-absolute">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg custom_nav-container">
+          @php /* @endphp
           <a class="logo" href="{{ route('index') }}">
-            <img src="{{ASSETS_FRONTEND}}img/GK-Final-1.png" />
+            <img src="{{ASSETS_FRONTEND}}img/logo.png" />
           </a>
+          @php */ @endphp
 
           <button class="navbar-toggler text-green" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
             <span class=""> </span>
