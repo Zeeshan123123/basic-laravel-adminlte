@@ -30,14 +30,6 @@ define('UPLOADS', BASE_PATH.'images/profile/');
 define('PUBLICS_PATH', BASE_PATH);
 
 
-
-
-function getDefaultGiftCardStatuses()
-{
-	return ['active' => 'active', 'inactive' => 'inactive'];
-}
-
-
 // pass status when want to get according to status type
 function getModelData( $model = null, $condition = null, $orderBy = 'DESC' ) {
 	$prefix = "\App\Models\\";
@@ -48,6 +40,19 @@ function getModelData( $model = null, $condition = null, $orderBy = 'DESC' ) {
         $query->where($condition);
     })
     ->orderBy('id', $orderBy)
+    ->get();
+}
+
+function getModelDataBylimit( $model = null, $condition = null, $orderBy = 'DESC', $col = 'id', $limit = 9999 ) {
+    $prefix = "\App\Models\\";
+    $prefix = $prefix.ucfirst($model);
+    
+    return $prefix::
+    when($condition, function($query) use ($condition) {
+        $query->where($condition);
+    })
+    ->orderBy($col, $orderBy)
+    ->take($limit)
     ->get();
 }
 
@@ -62,4 +67,12 @@ function getModelSingleRowData( $model = null, $condition = null ) {
     ->first();
 }
 
+function getDefaultStatuses()
+{
+    return ['active' => 'active', 'inactive' => 'inactive'];
+}
 
+function plural($string='')
+{
+    return \Str::plural($string);
+}

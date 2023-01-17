@@ -25,6 +25,9 @@
   <link rel="stylesheet" href="{{ASSETS_BACKEND}}plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="{{ASSETS_BACKEND}}plugins/summernote/summernote-bs4.min.css">
+
+  <!-- Page Styles -->
+  @yield('page_styles')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
