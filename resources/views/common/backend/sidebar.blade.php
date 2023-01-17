@@ -1,8 +1,11 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
+    @php /* @endphp
     <img src="{{ASSETS_FRONTEND}}img/GK-Final-1.png" alt="GK Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-    <span class="brand-text font-weight-light">{{ config('app.name', 'Gorilla Kitchen') }}</span>
+    @php */ @endphp
+
+    <span class="brand-text font-weight-light ml-4">{{ config('app.name', 'Gorilla Kitchen') }}</span>
   </a>
 
   <!-- Sidebar -->
